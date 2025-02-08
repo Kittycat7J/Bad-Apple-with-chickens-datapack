@@ -6,8 +6,8 @@ tellraw @s {"text": "No about section yet.","color": "gray"}
 
 tellraw @s {"text": "                                ","color": "gray","strikethrough": true}
 
-function brainage_template:sounds/click
+function bad_apple:sounds/click
 
 # Reset Trigger
-scoreboard players set @s brainage_template.about 0
-scoreboard players enable @s brainage_template.about
+scoreboard players set @s bad_apple.about 0
+scoreboard players enable @s bad_apple.about
