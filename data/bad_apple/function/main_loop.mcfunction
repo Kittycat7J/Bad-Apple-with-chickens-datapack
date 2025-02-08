@@ -2,7 +2,7 @@
 scoreboard objectives add bad_apple_frame dummy
 
 # Bad Apple Main Loop
-execute as @e[tag=bad_apple_marker,limit=1] run scoreboard players add @s bad_apple_frame 1
+
 execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 207 run scoreboard players set @s bad_apple_frame 0
 
 execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 0 run function bad_apple:frames/frame_000
