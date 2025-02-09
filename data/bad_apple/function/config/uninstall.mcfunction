@@ -1,11 +1,13 @@
-tellraw @a [{"text":"Brainage's Template (1.21) ","color": "green"},{"text": "uninstalled.","color": "red"}]
+tellraw @a [{"text":"Kittycat7J's Bad Apple!! datapack (25w06a) ","color": "green"},{"text": "uninstalled.","color": "red"}]
 
-function bad_apple:sounds/click
-
+schedule clear bad_apple:main_loop
+execute as @a in minecraft:overworld run kill @e[type=!player]
 # Remove Triggers
 scoreboard objectives remove bad_apple.about
 scoreboard objectives remove bad_apple.config
-
+scoreboard objectives remove bad_apple_frame
+scoreboard players reset #bad_apple bad_apple_frame
+scoreboard players reset @e temp 
 # Remove New Player Joined Flag
 scoreboard objectives remove bad_apple.new_player_joined
 

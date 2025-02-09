@@ -1,10 +1,10 @@
 # Initialize scoreboard objective
 scoreboard objectives add bad_apple_frame dummy
-scoreboard objectives add #temp dummy
+scoreboard objectives add temp dummy
 
 # Bad Apple Main Loop
 execute as @e[tag=bad_apple_marker,limit=1] run scoreboard players add @s bad_apple_frame 1
-
+# execute as @e[tag=bad_apple_marker] run effect give @s minecraft:glowing 1 1 true
 # Reset after 207 frames
 execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 207 run scoreboard players set @s bad_apple_frame 0
 
@@ -219,4 +219,4 @@ execute if score #temp bad_apple_frame matches 205 run function bad_apple:frames
 execute if score #temp bad_apple_frame matches 206 run function bad_apple:frames/frame_206
 
 # Schedule the next tick
-schedule function bad_apple:main_loop 1t
+schedule function bad_apple:main_loop 0.13s

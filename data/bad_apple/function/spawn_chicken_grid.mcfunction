@@ -1,3 +1,4 @@
+
 summon minecraft:chicken ~0 ~10 ~ {NoAI:1b,Tags:["bad_apple_chicken"]}
 summon minecraft:chicken ~0 ~11 ~ {NoAI:1b,Tags:["bad_apple_chicken"]}
 summon minecraft:chicken ~0 ~12 ~ {NoAI:1b,Tags:["bad_apple_chicken"]}
