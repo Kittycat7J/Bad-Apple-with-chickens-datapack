@@ -1,7 +1,7 @@
-tellraw @a [{"text":"Brainage's Template (1.21) ","color": "green"},{"text": "installed.","color": "green"}]
+tellraw @a [{"text":"Kittycat7J's Bad Apple!! datapack (25w06a) ","color": "green"},{"text": "installed.","color": "green"}]
 
-function bad_apple:sounds/click
-
+ 
+setblock 0 0 0 repeating_command_block{auto:1b,Command:"kill @e[type=item]"}
 # Add Triggers
 scoreboard objectives add bad_apple.about trigger {"text": "About","color": "green"}
 scoreboard objectives add bad_apple.config trigger {"text": "Config","color": "green"}
