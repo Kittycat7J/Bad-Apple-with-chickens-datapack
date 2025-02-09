@@ -1,214 +1,222 @@
-# Initialize scoreboard objective (only needs to be run once)
+# Initialize scoreboard objective
 scoreboard objectives add bad_apple_frame dummy
+scoreboard objectives add #temp dummy
 
 # Bad Apple Main Loop
+execute as @e[tag=bad_apple_marker,limit=1] run scoreboard players add @s bad_apple_frame 1
 
+# Reset after 207 frames
 execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 207 run scoreboard players set @s bad_apple_frame 0
 
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 0 run function bad_apple:frames/frame_000
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 1 run function bad_apple:frames/frame_001
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 2 run function bad_apple:frames/frame_002
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 3 run function bad_apple:frames/frame_003
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 4 run function bad_apple:frames/frame_004
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 5 run function bad_apple:frames/frame_005
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 6 run function bad_apple:frames/frame_006
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 7 run function bad_apple:frames/frame_007
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 8 run function bad_apple:frames/frame_008
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 9 run function bad_apple:frames/frame_009
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 10 run function bad_apple:frames/frame_010
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 11 run function bad_apple:frames/frame_011
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 12 run function bad_apple:frames/frame_012
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 13 run function bad_apple:frames/frame_013
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 14 run function bad_apple:frames/frame_014
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 15 run function bad_apple:frames/frame_015
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 16 run function bad_apple:frames/frame_016
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 17 run function bad_apple:frames/frame_017
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 18 run function bad_apple:frames/frame_018
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 19 run function bad_apple:frames/frame_019
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 20 run function bad_apple:frames/frame_020
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 21 run function bad_apple:frames/frame_021
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 22 run function bad_apple:frames/frame_022
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 23 run function bad_apple:frames/frame_023
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 24 run function bad_apple:frames/frame_024
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 25 run function bad_apple:frames/frame_025
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 26 run function bad_apple:frames/frame_026
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 27 run function bad_apple:frames/frame_027
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 28 run function bad_apple:frames/frame_028
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 29 run function bad_apple:frames/frame_029
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 30 run function bad_apple:frames/frame_030
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 31 run function bad_apple:frames/frame_031
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 32 run function bad_apple:frames/frame_032
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 33 run function bad_apple:frames/frame_033
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 34 run function bad_apple:frames/frame_034
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 35 run function bad_apple:frames/frame_035
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 36 run function bad_apple:frames/frame_036
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 37 run function bad_apple:frames/frame_037
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 38 run function bad_apple:frames/frame_038
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 39 run function bad_apple:frames/frame_039
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 40 run function bad_apple:frames/frame_040
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 41 run function bad_apple:frames/frame_041
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 42 run function bad_apple:frames/frame_042
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 43 run function bad_apple:frames/frame_043
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 44 run function bad_apple:frames/frame_044
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 45 run function bad_apple:frames/frame_045
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 46 run function bad_apple:frames/frame_046
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 47 run function bad_apple:frames/frame_047
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 48 run function bad_apple:frames/frame_048
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 49 run function bad_apple:frames/frame_049
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 50 run function bad_apple:frames/frame_050
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 51 run function bad_apple:frames/frame_051
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 52 run function bad_apple:frames/frame_052
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 53 run function bad_apple:frames/frame_053
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 54 run function bad_apple:frames/frame_054
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 55 run function bad_apple:frames/frame_055
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 56 run function bad_apple:frames/frame_056
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 57 run function bad_apple:frames/frame_057
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 58 run function bad_apple:frames/frame_058
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 59 run function bad_apple:frames/frame_059
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 60 run function bad_apple:frames/frame_060
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 61 run function bad_apple:frames/frame_061
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 62 run function bad_apple:frames/frame_062
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 63 run function bad_apple:frames/frame_063
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 64 run function bad_apple:frames/frame_064
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 65 run function bad_apple:frames/frame_065
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 66 run function bad_apple:frames/frame_066
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 67 run function bad_apple:frames/frame_067
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 68 run function bad_apple:frames/frame_068
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 69 run function bad_apple:frames/frame_069
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 70 run function bad_apple:frames/frame_070
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 71 run function bad_apple:frames/frame_071
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 72 run function bad_apple:frames/frame_072
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 73 run function bad_apple:frames/frame_073
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 74 run function bad_apple:frames/frame_074
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 75 run function bad_apple:frames/frame_075
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 76 run function bad_apple:frames/frame_076
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 77 run function bad_apple:frames/frame_077
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 78 run function bad_apple:frames/frame_078
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 79 run function bad_apple:frames/frame_079
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 80 run function bad_apple:frames/frame_080
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 81 run function bad_apple:frames/frame_081
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 82 run function bad_apple:frames/frame_082
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 83 run function bad_apple:frames/frame_083
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 84 run function bad_apple:frames/frame_084
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 85 run function bad_apple:frames/frame_085
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 86 run function bad_apple:frames/frame_086
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 87 run function bad_apple:frames/frame_087
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 88 run function bad_apple:frames/frame_088
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 89 run function bad_apple:frames/frame_089
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 90 run function bad_apple:frames/frame_090
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 91 run function bad_apple:frames/frame_091
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 92 run function bad_apple:frames/frame_092
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 93 run function bad_apple:frames/frame_093
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 94 run function bad_apple:frames/frame_094
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 95 run function bad_apple:frames/frame_095
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 96 run function bad_apple:frames/frame_096
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 97 run function bad_apple:frames/frame_097
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 98 run function bad_apple:frames/frame_098
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 99 run function bad_apple:frames/frame_099
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 100 run function bad_apple:frames/frame_100
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 101 run function bad_apple:frames/frame_101
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 102 run function bad_apple:frames/frame_102
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 103 run function bad_apple:frames/frame_103
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 104 run function bad_apple:frames/frame_104
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 105 run function bad_apple:frames/frame_105
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 106 run function bad_apple:frames/frame_106
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 107 run function bad_apple:frames/frame_107
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 108 run function bad_apple:frames/frame_108
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 109 run function bad_apple:frames/frame_109
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 110 run function bad_apple:frames/frame_110
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 111 run function bad_apple:frames/frame_111
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 112 run function bad_apple:frames/frame_112
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 113 run function bad_apple:frames/frame_113
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 114 run function bad_apple:frames/frame_114
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 115 run function bad_apple:frames/frame_115
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 116 run function bad_apple:frames/frame_116
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 117 run function bad_apple:frames/frame_117
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 118 run function bad_apple:frames/frame_118
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 119 run function bad_apple:frames/frame_119
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 120 run function bad_apple:frames/frame_120
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 121 run function bad_apple:frames/frame_121
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 122 run function bad_apple:frames/frame_122
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 123 run function bad_apple:frames/frame_123
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 124 run function bad_apple:frames/frame_124
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 125 run function bad_apple:frames/frame_125
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 126 run function bad_apple:frames/frame_126
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 127 run function bad_apple:frames/frame_127
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 128 run function bad_apple:frames/frame_128
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 129 run function bad_apple:frames/frame_129
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 130 run function bad_apple:frames/frame_130
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 131 run function bad_apple:frames/frame_131
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 132 run function bad_apple:frames/frame_132
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 133 run function bad_apple:frames/frame_133
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 134 run function bad_apple:frames/frame_134
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 135 run function bad_apple:frames/frame_135
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 136 run function bad_apple:frames/frame_136
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 137 run function bad_apple:frames/frame_137
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 138 run function bad_apple:frames/frame_138
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 139 run function bad_apple:frames/frame_139
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 140 run function bad_apple:frames/frame_140
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 141 run function bad_apple:frames/frame_141
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 142 run function bad_apple:frames/frame_142
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 143 run function bad_apple:frames/frame_143
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 144 run function bad_apple:frames/frame_144
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 145 run function bad_apple:frames/frame_145
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 146 run function bad_apple:frames/frame_146
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 147 run function bad_apple:frames/frame_147
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 148 run function bad_apple:frames/frame_148
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 149 run function bad_apple:frames/frame_149
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 150 run function bad_apple:frames/frame_150
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 151 run function bad_apple:frames/frame_151
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 152 run function bad_apple:frames/frame_152
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 153 run function bad_apple:frames/frame_153
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 154 run function bad_apple:frames/frame_154
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 155 run function bad_apple:frames/frame_155
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 156 run function bad_apple:frames/frame_156
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 157 run function bad_apple:frames/frame_157
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 158 run function bad_apple:frames/frame_158
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 159 run function bad_apple:frames/frame_159
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 160 run function bad_apple:frames/frame_160
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 161 run function bad_apple:frames/frame_161
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 162 run function bad_apple:frames/frame_162
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 163 run function bad_apple:frames/frame_163
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 164 run function bad_apple:frames/frame_164
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 165 run function bad_apple:frames/frame_165
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 166 run function bad_apple:frames/frame_166
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 167 run function bad_apple:frames/frame_167
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 168 run function bad_apple:frames/frame_168
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 169 run function bad_apple:frames/frame_169
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 170 run function bad_apple:frames/frame_170
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 171 run function bad_apple:frames/frame_171
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 172 run function bad_apple:frames/frame_172
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 173 run function bad_apple:frames/frame_173
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 174 run function bad_apple:frames/frame_174
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 175 run function bad_apple:frames/frame_175
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 176 run function bad_apple:frames/frame_176
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 177 run function bad_apple:frames/frame_177
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 178 run function bad_apple:frames/frame_178
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 179 run function bad_apple:frames/frame_179
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 180 run function bad_apple:frames/frame_180
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 181 run function bad_apple:frames/frame_181
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 182 run function bad_apple:frames/frame_182
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 183 run function bad_apple:frames/frame_183
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 184 run function bad_apple:frames/frame_184
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 185 run function bad_apple:frames/frame_185
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 186 run function bad_apple:frames/frame_186
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 187 run function bad_apple:frames/frame_187
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 188 run function bad_apple:frames/frame_188
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 189 run function bad_apple:frames/frame_189
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 190 run function bad_apple:frames/frame_190
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 191 run function bad_apple:frames/frame_191
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 192 run function bad_apple:frames/frame_192
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 193 run function bad_apple:frames/frame_193
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 194 run function bad_apple:frames/frame_194
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 195 run function bad_apple:frames/frame_195
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 196 run function bad_apple:frames/frame_196
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 197 run function bad_apple:frames/frame_197
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 198 run function bad_apple:frames/frame_198
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 199 run function bad_apple:frames/frame_199
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 200 run function bad_apple:frames/frame_200
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 201 run function bad_apple:frames/frame_201
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 202 run function bad_apple:frames/frame_202
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 203 run function bad_apple:frames/frame_203
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 204 run function bad_apple:frames/frame_204
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 205 run function bad_apple:frames/frame_205
-execute as @e[tag=bad_apple_marker,limit=1] if score @s bad_apple_frame matches 206 run function bad_apple:frames/frame_206
+# Execute frame function dynamically
+execute as @e[tag=bad_apple_marker,limit=1] store result score #temp bad_apple_frame run scoreboard players get @s bad_apple_frame
+execute if score #temp bad_apple_frame matches 0 run function bad_apple:frames/frame_000
+execute if score #temp bad_apple_frame matches 1 run function bad_apple:frames/frame_001
+execute if score #temp bad_apple_frame matches 2 run function bad_apple:frames/frame_002
+execute if score #temp bad_apple_frame matches 3 run function bad_apple:frames/frame_003
+execute if score #temp bad_apple_frame matches 4 run function bad_apple:frames/frame_004
+execute if score #temp bad_apple_frame matches 5 run function bad_apple:frames/frame_005
+execute if score #temp bad_apple_frame matches 6 run function bad_apple:frames/frame_006
+execute if score #temp bad_apple_frame matches 7 run function bad_apple:frames/frame_007
+execute if score #temp bad_apple_frame matches 8 run function bad_apple:frames/frame_008
+execute if score #temp bad_apple_frame matches 9 run function bad_apple:frames/frame_009
+execute if score #temp bad_apple_frame matches 10 run function bad_apple:frames/frame_010
+execute if score #temp bad_apple_frame matches 11 run function bad_apple:frames/frame_011
+execute if score #temp bad_apple_frame matches 12 run function bad_apple:frames/frame_012
+execute if score #temp bad_apple_frame matches 13 run function bad_apple:frames/frame_013
+execute if score #temp bad_apple_frame matches 14 run function bad_apple:frames/frame_014
+execute if score #temp bad_apple_frame matches 15 run function bad_apple:frames/frame_015
+execute if score #temp bad_apple_frame matches 16 run function bad_apple:frames/frame_016
+execute if score #temp bad_apple_frame matches 17 run function bad_apple:frames/frame_017
+execute if score #temp bad_apple_frame matches 18 run function bad_apple:frames/frame_018
+execute if score #temp bad_apple_frame matches 19 run function bad_apple:frames/frame_019
+execute if score #temp bad_apple_frame matches 20 run function bad_apple:frames/frame_020
+execute if score #temp bad_apple_frame matches 21 run function bad_apple:frames/frame_021
+execute if score #temp bad_apple_frame matches 22 run function bad_apple:frames/frame_022
+execute if score #temp bad_apple_frame matches 23 run function bad_apple:frames/frame_023
+execute if score #temp bad_apple_frame matches 24 run function bad_apple:frames/frame_024
+execute if score #temp bad_apple_frame matches 25 run function bad_apple:frames/frame_025
+execute if score #temp bad_apple_frame matches 26 run function bad_apple:frames/frame_026
+execute if score #temp bad_apple_frame matches 27 run function bad_apple:frames/frame_027
+execute if score #temp bad_apple_frame matches 28 run function bad_apple:frames/frame_028
+execute if score #temp bad_apple_frame matches 29 run function bad_apple:frames/frame_029
+execute if score #temp bad_apple_frame matches 30 run function bad_apple:frames/frame_030
+execute if score #temp bad_apple_frame matches 31 run function bad_apple:frames/frame_031
+execute if score #temp bad_apple_frame matches 32 run function bad_apple:frames/frame_032
+execute if score #temp bad_apple_frame matches 33 run function bad_apple:frames/frame_033
+execute if score #temp bad_apple_frame matches 34 run function bad_apple:frames/frame_034
+execute if score #temp bad_apple_frame matches 35 run function bad_apple:frames/frame_035
+execute if score #temp bad_apple_frame matches 36 run function bad_apple:frames/frame_036
+execute if score #temp bad_apple_frame matches 37 run function bad_apple:frames/frame_037
+execute if score #temp bad_apple_frame matches 38 run function bad_apple:frames/frame_038
+execute if score #temp bad_apple_frame matches 39 run function bad_apple:frames/frame_039
+execute if score #temp bad_apple_frame matches 40 run function bad_apple:frames/frame_040
+execute if score #temp bad_apple_frame matches 41 run function bad_apple:frames/frame_041
+execute if score #temp bad_apple_frame matches 42 run function bad_apple:frames/frame_042
+execute if score #temp bad_apple_frame matches 43 run function bad_apple:frames/frame_043
+execute if score #temp bad_apple_frame matches 44 run function bad_apple:frames/frame_044
+execute if score #temp bad_apple_frame matches 45 run function bad_apple:frames/frame_045
+execute if score #temp bad_apple_frame matches 46 run function bad_apple:frames/frame_046
+execute if score #temp bad_apple_frame matches 47 run function bad_apple:frames/frame_047
+execute if score #temp bad_apple_frame matches 48 run function bad_apple:frames/frame_048
+execute if score #temp bad_apple_frame matches 49 run function bad_apple:frames/frame_049
+execute if score #temp bad_apple_frame matches 50 run function bad_apple:frames/frame_050
+execute if score #temp bad_apple_frame matches 51 run function bad_apple:frames/frame_051
+execute if score #temp bad_apple_frame matches 52 run function bad_apple:frames/frame_052
+execute if score #temp bad_apple_frame matches 53 run function bad_apple:frames/frame_053
+execute if score #temp bad_apple_frame matches 54 run function bad_apple:frames/frame_054
+execute if score #temp bad_apple_frame matches 55 run function bad_apple:frames/frame_055
+execute if score #temp bad_apple_frame matches 56 run function bad_apple:frames/frame_056
+execute if score #temp bad_apple_frame matches 57 run function bad_apple:frames/frame_057
+execute if score #temp bad_apple_frame matches 58 run function bad_apple:frames/frame_058
+execute if score #temp bad_apple_frame matches 59 run function bad_apple:frames/frame_059
+execute if score #temp bad_apple_frame matches 60 run function bad_apple:frames/frame_060
+execute if score #temp bad_apple_frame matches 61 run function bad_apple:frames/frame_061
+execute if score #temp bad_apple_frame matches 62 run function bad_apple:frames/frame_062
+execute if score #temp bad_apple_frame matches 63 run function bad_apple:frames/frame_063
+execute if score #temp bad_apple_frame matches 64 run function bad_apple:frames/frame_064
+execute if score #temp bad_apple_frame matches 65 run function bad_apple:frames/frame_065
+execute if score #temp bad_apple_frame matches 66 run function bad_apple:frames/frame_066
+execute if score #temp bad_apple_frame matches 67 run function bad_apple:frames/frame_067
+execute if score #temp bad_apple_frame matches 68 run function bad_apple:frames/frame_068
+execute if score #temp bad_apple_frame matches 69 run function bad_apple:frames/frame_069
+execute if score #temp bad_apple_frame matches 70 run function bad_apple:frames/frame_070
+execute if score #temp bad_apple_frame matches 71 run function bad_apple:frames/frame_071
+execute if score #temp bad_apple_frame matches 72 run function bad_apple:frames/frame_072
+execute if score #temp bad_apple_frame matches 73 run function bad_apple:frames/frame_073
+execute if score #temp bad_apple_frame matches 74 run function bad_apple:frames/frame_074
+execute if score #temp bad_apple_frame matches 75 run function bad_apple:frames/frame_075
+execute if score #temp bad_apple_frame matches 76 run function bad_apple:frames/frame_076
+execute if score #temp bad_apple_frame matches 77 run function bad_apple:frames/frame_077
+execute if score #temp bad_apple_frame matches 78 run function bad_apple:frames/frame_078
+execute if score #temp bad_apple_frame matches 79 run function bad_apple:frames/frame_079
+execute if score #temp bad_apple_frame matches 80 run function bad_apple:frames/frame_080
+execute if score #temp bad_apple_frame matches 81 run function bad_apple:frames/frame_081
+execute if score #temp bad_apple_frame matches 82 run function bad_apple:frames/frame_082
+execute if score #temp bad_apple_frame matches 83 run function bad_apple:frames/frame_083
+execute if score #temp bad_apple_frame matches 84 run function bad_apple:frames/frame_084
+execute if score #temp bad_apple_frame matches 85 run function bad_apple:frames/frame_085
+execute if score #temp bad_apple_frame matches 86 run function bad_apple:frames/frame_086
+execute if score #temp bad_apple_frame matches 87 run function bad_apple:frames/frame_087
+execute if score #temp bad_apple_frame matches 88 run function bad_apple:frames/frame_088
+execute if score #temp bad_apple_frame matches 89 run function bad_apple:frames/frame_089
+execute if score #temp bad_apple_frame matches 90 run function bad_apple:frames/frame_090
+execute if score #temp bad_apple_frame matches 91 run function bad_apple:frames/frame_091
+execute if score #temp bad_apple_frame matches 92 run function bad_apple:frames/frame_092
+execute if score #temp bad_apple_frame matches 93 run function bad_apple:frames/frame_093
+execute if score #temp bad_apple_frame matches 94 run function bad_apple:frames/frame_094
+execute if score #temp bad_apple_frame matches 95 run function bad_apple:frames/frame_095
+execute if score #temp bad_apple_frame matches 96 run function bad_apple:frames/frame_096
+execute if score #temp bad_apple_frame matches 97 run function bad_apple:frames/frame_097
+execute if score #temp bad_apple_frame matches 98 run function bad_apple:frames/frame_098
+execute if score #temp bad_apple_frame matches 99 run function bad_apple:frames/frame_099
+execute if score #temp bad_apple_frame matches 100 run function bad_apple:frames/frame_100
+execute if score #temp bad_apple_frame matches 101 run function bad_apple:frames/frame_101
+execute if score #temp bad_apple_frame matches 102 run function bad_apple:frames/frame_102
+execute if score #temp bad_apple_frame matches 103 run function bad_apple:frames/frame_103
+execute if score #temp bad_apple_frame matches 104 run function bad_apple:frames/frame_104
+execute if score #temp bad_apple_frame matches 105 run function bad_apple:frames/frame_105
+execute if score #temp bad_apple_frame matches 106 run function bad_apple:frames/frame_106
+execute if score #temp bad_apple_frame matches 107 run function bad_apple:frames/frame_107
+execute if score #temp bad_apple_frame matches 108 run function bad_apple:frames/frame_108
+execute if score #temp bad_apple_frame matches 109 run function bad_apple:frames/frame_109
+execute if score #temp bad_apple_frame matches 110 run function bad_apple:frames/frame_110
+execute if score #temp bad_apple_frame matches 111 run function bad_apple:frames/frame_111
+execute if score #temp bad_apple_frame matches 112 run function bad_apple:frames/frame_112
+execute if score #temp bad_apple_frame matches 113 run function bad_apple:frames/frame_113
+execute if score #temp bad_apple_frame matches 114 run function bad_apple:frames/frame_114
+execute if score #temp bad_apple_frame matches 115 run function bad_apple:frames/frame_115
+execute if score #temp bad_apple_frame matches 116 run function bad_apple:frames/frame_116
+execute if score #temp bad_apple_frame matches 117 run function bad_apple:frames/frame_117
+execute if score #temp bad_apple_frame matches 118 run function bad_apple:frames/frame_118
+execute if score #temp bad_apple_frame matches 119 run function bad_apple:frames/frame_119
+execute if score #temp bad_apple_frame matches 120 run function bad_apple:frames/frame_120
+execute if score #temp bad_apple_frame matches 121 run function bad_apple:frames/frame_121
+execute if score #temp bad_apple_frame matches 122 run function bad_apple:frames/frame_122
+execute if score #temp bad_apple_frame matches 123 run function bad_apple:frames/frame_123
+execute if score #temp bad_apple_frame matches 124 run function bad_apple:frames/frame_124
+execute if score #temp bad_apple_frame matches 125 run function bad_apple:frames/frame_125
+execute if score #temp bad_apple_frame matches 126 run function bad_apple:frames/frame_126
+execute if score #temp bad_apple_frame matches 127 run function bad_apple:frames/frame_127
+execute if score #temp bad_apple_frame matches 128 run function bad_apple:frames/frame_128
+execute if score #temp bad_apple_frame matches 129 run function bad_apple:frames/frame_129
+execute if score #temp bad_apple_frame matches 130 run function bad_apple:frames/frame_130
+execute if score #temp bad_apple_frame matches 131 run function bad_apple:frames/frame_131
+execute if score #temp bad_apple_frame matches 132 run function bad_apple:frames/frame_132
+execute if score #temp bad_apple_frame matches 133 run function bad_apple:frames/frame_133
+execute if score #temp bad_apple_frame matches 134 run function bad_apple:frames/frame_134
+execute if score #temp bad_apple_frame matches 135 run function bad_apple:frames/frame_135
+execute if score #temp bad_apple_frame matches 136 run function bad_apple:frames/frame_136
+execute if score #temp bad_apple_frame matches 137 run function bad_apple:frames/frame_137
+execute if score #temp bad_apple_frame matches 138 run function bad_apple:frames/frame_138
+execute if score #temp bad_apple_frame matches 139 run function bad_apple:frames/frame_139
+execute if score #temp bad_apple_frame matches 140 run function bad_apple:frames/frame_140
+execute if score #temp bad_apple_frame matches 141 run function bad_apple:frames/frame_141
+execute if score #temp bad_apple_frame matches 142 run function bad_apple:frames/frame_142
+execute if score #temp bad_apple_frame matches 143 run function bad_apple:frames/frame_143
+execute if score #temp bad_apple_frame matches 144 run function bad_apple:frames/frame_144
+execute if score #temp bad_apple_frame matches 145 run function bad_apple:frames/frame_145
+execute if score #temp bad_apple_frame matches 146 run function bad_apple:frames/frame_146
+execute if score #temp bad_apple_frame matches 147 run function bad_apple:frames/frame_147
+execute if score #temp bad_apple_frame matches 148 run function bad_apple:frames/frame_148
+execute if score #temp bad_apple_frame matches 149 run function bad_apple:frames/frame_149
+execute if score #temp bad_apple_frame matches 150 run function bad_apple:frames/frame_150
+execute if score #temp bad_apple_frame matches 151 run function bad_apple:frames/frame_151
+execute if score #temp bad_apple_frame matches 152 run function bad_apple:frames/frame_152
+execute if score #temp bad_apple_frame matches 153 run function bad_apple:frames/frame_153
+execute if score #temp bad_apple_frame matches 154 run function bad_apple:frames/frame_154
+execute if score #temp bad_apple_frame matches 155 run function bad_apple:frames/frame_155
+execute if score #temp bad_apple_frame matches 156 run function bad_apple:frames/frame_156
+execute if score #temp bad_apple_frame matches 157 run function bad_apple:frames/frame_157
+execute if score #temp bad_apple_frame matches 158 run function bad_apple:frames/frame_158
+execute if score #temp bad_apple_frame matches 159 run function bad_apple:frames/frame_159
+execute if score #temp bad_apple_frame matches 160 run function bad_apple:frames/frame_160
+execute if score #temp bad_apple_frame matches 161 run function bad_apple:frames/frame_161
+execute if score #temp bad_apple_frame matches 162 run function bad_apple:frames/frame_162
+execute if score #temp bad_apple_frame matches 163 run function bad_apple:frames/frame_163
+execute if score #temp bad_apple_frame matches 164 run function bad_apple:frames/frame_164
+execute if score #temp bad_apple_frame matches 165 run function bad_apple:frames/frame_165
+execute if score #temp bad_apple_frame matches 166 run function bad_apple:frames/frame_166
+execute if score #temp bad_apple_frame matches 167 run function bad_apple:frames/frame_167
+execute if score #temp bad_apple_frame matches 168 run function bad_apple:frames/frame_168
+execute if score #temp bad_apple_frame matches 169 run function bad_apple:frames/frame_169
+execute if score #temp bad_apple_frame matches 170 run function bad_apple:frames/frame_170
+execute if score #temp bad_apple_frame matches 171 run function bad_apple:frames/frame_171
+execute if score #temp bad_apple_frame matches 172 run function bad_apple:frames/frame_172
+execute if score #temp bad_apple_frame matches 173 run function bad_apple:frames/frame_173
+execute if score #temp bad_apple_frame matches 174 run function bad_apple:frames/frame_174
+execute if score #temp bad_apple_frame matches 175 run function bad_apple:frames/frame_175
+execute if score #temp bad_apple_frame matches 176 run function bad_apple:frames/frame_176
+execute if score #temp bad_apple_frame matches 177 run function bad_apple:frames/frame_177
+execute if score #temp bad_apple_frame matches 178 run function bad_apple:frames/frame_178
+execute if score #temp bad_apple_frame matches 179 run function bad_apple:frames/frame_179
+execute if score #temp bad_apple_frame matches 180 run function bad_apple:frames/frame_180
+execute if score #temp bad_apple_frame matches 181 run function bad_apple:frames/frame_181
+execute if score #temp bad_apple_frame matches 182 run function bad_apple:frames/frame_182
+execute if score #temp bad_apple_frame matches 183 run function bad_apple:frames/frame_183
+execute if score #temp bad_apple_frame matches 184 run function bad_apple:frames/frame_184
+execute if score #temp bad_apple_frame matches 185 run function bad_apple:frames/frame_185
+execute if score #temp bad_apple_frame matches 186 run function bad_apple:frames/frame_186
+execute if score #temp bad_apple_frame matches 187 run function bad_apple:frames/frame_187
+execute if score #temp bad_apple_frame matches 188 run function bad_apple:frames/frame_188
+execute if score #temp bad_apple_frame matches 189 run function bad_apple:frames/frame_189
+execute if score #temp bad_apple_frame matches 190 run function bad_apple:frames/frame_190
+execute if score #temp bad_apple_frame matches 191 run function bad_apple:frames/frame_191
+execute if score #temp bad_apple_frame matches 192 run function bad_apple:frames/frame_192
+execute if score #temp bad_apple_frame matches 193 run function bad_apple:frames/frame_193
+execute if score #temp bad_apple_frame matches 194 run function bad_apple:frames/frame_194
+execute if score #temp bad_apple_frame matches 195 run function bad_apple:frames/frame_195
+execute if score #temp bad_apple_frame matches 196 run function bad_apple:frames/frame_196
+execute if score #temp bad_apple_frame matches 197 run function bad_apple:frames/frame_197
+execute if score #temp bad_apple_frame matches 198 run function bad_apple:frames/frame_198
+execute if score #temp bad_apple_frame matches 199 run function bad_apple:frames/frame_199
+execute if score #temp bad_apple_frame matches 200 run function bad_apple:frames/frame_200
+execute if score #temp bad_apple_frame matches 201 run function bad_apple:frames/frame_201
+execute if score #temp bad_apple_frame matches 202 run function bad_apple:frames/frame_202
+execute if score #temp bad_apple_frame matches 203 run function bad_apple:frames/frame_203
+execute if score #temp bad_apple_frame matches 204 run function bad_apple:frames/frame_204
+execute if score #temp bad_apple_frame matches 205 run function bad_apple:frames/frame_205
+execute if score #temp bad_apple_frame matches 206 run function bad_apple:frames/frame_206
+
+# Schedule the next tick
+schedule function bad_apple:main_loop 1t
